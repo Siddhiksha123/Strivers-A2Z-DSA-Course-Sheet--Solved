@@ -13,3 +13,57 @@ Before sorting: arr[] = {2,5,1,3,0};
 After sorting: arr[] = {0,1,2,3,5};
 
 Hence answer : arr[sizeofthearray-1] =5
+
+
+
+#include <bits/stdc++.h> 
+using namespace std;
+
+int largestElement(vector<int> &arr, int n) {
+    // Sort the vector in ascending order
+    sort(arr.begin(), arr.end());
+
+    // Return the largest element (which is now the last element after sorting)
+    return arr[n-1];
+}
+
+int main() {
+    vector<int> myArray = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
+    int size = myArray.size();
+
+    // Find the largest element
+    int result = largestElement(myArray, size);
+
+    // Print the result
+    cout << "The largest element is: " << result << endl;
+
+    return 0;
+}
+
+
+
+________Recusive Approach
+
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    // int n ;
+    // cin>>n;
+    int arr[4]={1, 0, 8,10};
+    
+    int max=arr[0];
+    
+    for(int i=0;i<4 ;i++)
+    {
+        if(arr[i]>arr[0])
+        max=arr[i];
+    }
+    cout<< max <<endl;
+    return 0;
+}
+
+
+
+
